@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>PRATICAL</title>
+			<meta charset="utf-8">
+			<link rel="stylesheet" type="text/css" href="bootstrap.css">
+			<link rel="stylesheet" type="text/css" href="../responsive-week-4/icons/css/all.min.css">
+			<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1" >
+
+			
+		</head>
+		<body >
+			<div class="container-fluid">
+				<div class="row m-5">
+					<div class="col-12" style="border:1px solid black">
+						<h4 style="font-weight: 700">AWS Customer Agreement</h3>
+						<input type="checkbox" name="" style="border:2px solid red;padding: 10px" id="checky1">
+						
+						<p style="display: inline;">Check here to indicate that you have read and agree to the terms of <a href="#" style="color: rgb(26,114,172);font-weight: 700">AWS Customer Agreement</a></p>
+						<button class=" btn-block btn-lg mt-4" id="create" disabled="" style="background-color: #ede0a4">Create account and continue</button>
+					</div>
+
+					<div class="col-12 mt-5" >
+						<h4 style="font-weight: 700">Where did you hear about us ? </h3>
+							<input type="checkbox" name="" id="ally"> Select All <br>
+							<input type="checkbox" name="" class="all"> Facebook <br>
+							<input type="checkbox" name="" class="all"> Google Ads <br>
+							<input type="checkbox" name="" class="all"> Newspaper <br>
+							<input type="checkbox" name="" class="all"> Linda Ikeja's Blog <br>
+							<input type="checkbox" name="" class="all"> Moat Academy <br>
+							<input type="checkbox" name="" class="all"> Punch Online <br>
+							<input type="checkbox" name="" class="all"> Others <br>
+					</div>
+					
+
+
+			<script src="js/jquery-3.5.1.min.js"></script>
+			<script src="js/popper.min.js"></script>
+			<script src="js/bootstrap.js"></script>
+
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$('#checky1').click(function(){
+					var tick =$('#checky1').prop('checked')
+					if (tick==true) {
+						$('#create').removeAttr('disabled')
+					} else {
+						$('#create').attr('disabled','disabled')
+					}
+				})
+
+					$('#ally').click(function(){
+						var chick= $('#ally').prop('checked')
+						if (chick==true) {
+							$('.all').prop('checked',true)
+						} else {
+							$('.all').prop('checked',false)
+						}
+					})	
+
+
+
+				})
+				
+
+
+
+			</script>
+		</body>
+	</html>
